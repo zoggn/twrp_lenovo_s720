@@ -1,0 +1,46 @@
+# Platform
+TARGET_BOARD_PLATFORM := mt6577 
+
+# Architecture
+TARGET_ARCH := arm
+TARGET_ARCH_VARIANT := armv7-a-neon
+TARGET_CPU_ABI := armeabi-v7a
+TARGET_CPU_ABI2 := armeabi
+TARGET_CPU_SMP := true
+TARGET_CPU_VARIANT := cortex-a9
+
+# Bootloader
+TARGET_NO_BOOTLOADER := true
+TARGET_BOOTLOADER_BOARD_NAME := MT6577
+
+# Kernel
+TARGET_PREBUILT_KERNEL := device/lenovo/s720/kernel
+BOARD_KERNEL_CMDLINE := 
+BOARD_KERNEL_BASE := 0x10000000
+BOARD_KERNEL_PAGESIZE := 2048
+
+# Partitions
+BOARD_BOOTIMAGE_PARTITION_SIZE := 0x00600000
+BOARD_RECOVERYIMAGE_PARTITION_SIZE := 
+
+# Recovery
+TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
+TARGET_USERIMAGES_USE_EXT4 := true
+BOARD_HAS_LARGE_FILESYSTEM := true
+BOARD_USE_CUSTOM_RECOVERY_FONT := \"roboto_15x24.h\"
+BOARD_SUPPRESS_EMMC_WIPE := true
+
+# TWRP
+HAVE_SELINUX := true
+TW_THEME := portrait_mdpi
+TW_BRIGHTNESS_PATH := /sys/devices/platform/leds-mt65xx/leds/lcd-backlight/brightness
+TW_MAX_BRIGHTNESS := 255
+TW_CUSTOM_BATTERY_PATH := /sys/devices/platform/mt6329-battery/power_supply/battery/
+RECOVERY_GRAPHICS_USE_LINELENGTH := true
+TW_INTERNAL_STORAGE_PATH :="/sdcard"
+TW_INTERNAL_STORAGE_MOUNT_POINT :="sdcard"
+TW_EXTERNAL_STORAGE_PATH :="/sdcard2"
+TW_EXTERNAL_STORAGE_MOUNT_POINT :="sdcard2"
+
+# USB Mounting
+TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/msm_hsusb/gadget/lun%d/file
